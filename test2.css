@@ -1,0 +1,179 @@
+@font-face {
+    font-family: Carino;
+    src: url(Fonts/CarinoSansBold.woff);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Poppins;
+    background-color: #000;  
+}
+
+
+.header{
+    position: sticky;
+    top: 0;
+}
+
+.hamburger{
+    
+    font-size: 25px;
+    display: block;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    margin: 5px auto;
+    width: 25px;
+    height: 4px;
+    border-radius:1px ;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.logo{
+    font-family: Walter;
+    color: #fff;
+    font-weight: bold;
+}
+
+.header{
+    height: 100px;
+    background-color: inherit;
+    position:sticky-top;
+   
+}
+
+.header .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 30px;
+   
+}
+
+.name{
+    color: #fff;
+    align-items: center;
+    font-size: 120px;
+      
+}
+
+.dev{
+    color: #fff;
+    font-size:200px;
+    animation-name:fade;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: ease;  
+    
+}
+
+span::before{
+    content: 'DEVELOPER';
+    animation: changetext 20s linear forwards ease-in-out;
+    animation-iteration-count: infinite;
+    transition: all 0.5s;
+    left: 120%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+}
+
+@keyframes fade{
+    0%{color: #fff;}
+    25%{color: aqua;}
+    50%{color: red;}
+    75%{color: blue;}
+    100%{color: yellow;}
+}
+
+@keyframes changetext{
+
+    0%{
+        content: 'DESIGNER';
+        opacity: 0.6;
+        left: -20%; 
+    }
+
+    50%{
+        content: 'DEVELOPER';
+        opacity: 0.6;
+        left: 100%; 
+    }
+
+    100%{
+        content: 'DESIGNER';
+        opacity: 0.6;
+        left: -20%;
+    }
+
+  
+}
+
+.container .myname{
+   
+   
+    border: 1px solid rgba(56, 56, 56, 0.527);
+    border-radius: 10px;
+    background-color: rgb(150, 201, 245);
+    box-shadow: 0px 0px 20px rgba(75, 75, 75, 0.527);
+    text-align: center;
+    align-items: center;
+    display: block;
+    height: 100%;
+    width: 405px;
+    line-height: 1.0;
+}
+
+.hero .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+@media(max-width:764px){
+
+    .name{
+        color: #fff;
+        align-items: center;
+        font-size: 80px;
+          
+    }
+
+    .dev{
+        color: #fff;
+        font-size:100px;
+        
+    }
+
+    .container .myname{
+   
+   
+        border: 1px solid rgba(56, 56, 56, 0.527);
+        border-radius: 10px;
+        background-color: rgb(189, 116, 189);
+        box-shadow: 0px 0px 20px rgba(75, 75, 75, 0.527);
+        text-align: center;
+        align-items: center;
+        display: block;
+        height: 100%;
+        width: 203px;
+        line-height: 1.0;
+    }
+    
+    
+}
